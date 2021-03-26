@@ -4,5 +4,5 @@
   "documentation": "https://github.com/hobus1domini/bvg-sensor",
   "requirements": [],
   "dependencies": [],
-  "codeowners": ["@fluffykraken", "@disrupted", "@tobias-richter"]
+  "codeowners": ["@fluffykraken", "@disrupted", "@tobias-richter", "@morremeyer"]
 }
