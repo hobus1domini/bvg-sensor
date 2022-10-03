@@ -6,6 +6,7 @@
 # Version 0.3.2 bufix for TypeError
 # Version 0.3.3 switched to timezone aware objects, cache_size added to config parameters, optimized logging
 # Version 0.3.4 fixed encoding (issue #3), fixed typo in filepath
+# Version 0.4.0 added API v5, several fixes, device_state_attributes is now deprecated and replaced by extra_state_attributes
 
 from urllib.request import urlopen
 import json
@@ -122,7 +123,7 @@ class BvgSensor(Entity):
         return self._state
 
     @property
-    def device_state_attributes(self):
+    def extra_state_attributes(self):
         """Return the state attributes."""
         if self.singleConnection is not None:
             return {
