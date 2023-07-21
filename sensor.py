@@ -7,6 +7,7 @@
 # Version 0.3.3 switched to timezone aware objects, cache_size added to config parameters, optimized logging
 # Version 0.3.4 fixed encoding (issue #3), fixed typo in filepath
 # Version 0.4.0 added API v5, several fixes, device_state_attributes is now deprecated and replaced by extra_state_attributes
+# Version 0.4.1 updated to api v6
 
 from urllib.request import urlopen
 import json
@@ -103,7 +104,7 @@ class BvgSensor(Entity):
         self._stop_id = stop_id
         self.direction = direction
         self.min_due_in = min_due_in
-        self.url = "https://v5.bvg.transport.rest/stops/{}/departures?duration={}".format(
+        self.url = "https://v6.bvg.transport.rest/stops/{}/departures?duration={}".format(
             self._stop_id, self._cache_size
         )
         self.data = None
