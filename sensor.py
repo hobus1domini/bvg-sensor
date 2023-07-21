@@ -223,7 +223,7 @@ class BvgSensor(Entity):
         timetable_l = list()
         date_now = datetime.now(pytz.timezone(self.hass_config.get("time_zone")))
         for dest in direction:
-            for pos in self.data:
+            for pos in self.data['departures']:
                 # _LOGGER.warning("conf_direction: {} pos_direction {}".format(direction, pos['direction']))
                 # if pos['direction'] in direction:
                 if dest in pos["direction"]:
